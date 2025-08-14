@@ -228,7 +228,6 @@ class ChatApp:
             peer_pem = "Not received yet."
 
         key_info = (
-            "---- Your Private Key ----\n" + private_pem +
             "\n---- Your Public Key ----\n" + public_pem +
             "\n---- Peer Public Key ----\n" + peer_pem
         )
