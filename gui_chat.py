@@ -58,7 +58,7 @@ class ChatApp:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         if is_server:
-            self.socket.bind(('', PORT))
+            self.socket.bind(('0.0.0.0', PORT))
             self.socket.listen(1)
             self.chat_area.config(state='normal')
             self.chat_area.insert(tk.END, "[+] Waiting for a connection...\n")
@@ -262,6 +262,8 @@ class ChatApp:
 
     def run(self):
         self.window.mainloop()
+
+
 
 # --------- MAIN LOGIC ---------
 if __name__ == "__main__":
