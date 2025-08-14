@@ -211,15 +211,6 @@ class ChatApp:
         text = tk.Text(window, width=80, height=30, wrap=tk.WORD)
         text.pack(padx=10, pady=10)
 
-        if self.private_key:
-            private_pem = self.private_key.private_bytes(
-                encoding=serialization.Encoding.PEM,
-                format=serialization.PrivateFormat.TraditionalOpenSSL,
-                encryption_algorithm=serialization.NoEncryption()
-            ).decode()
-        else:
-            private_pem = "Not generated yet."
-
         if self.public_key:
             public_pem = self.public_key.public_bytes(
                 encoding=serialization.Encoding.PEM,
