@@ -16,7 +16,7 @@ from crypto_utils import (
 PORT = 12345
 BUFFER_SIZE = 4096
 EXIT_COMMAND = "!exit"
-DEBUG_MODE = False  # Set to False to disable Wireshark tags & console logs
+DEBUG_MODE = True  # Set to False to disable Wireshark tags & console logs
 
 class ChatApp:
     def __init__(self, is_server, peer_ip=None):
